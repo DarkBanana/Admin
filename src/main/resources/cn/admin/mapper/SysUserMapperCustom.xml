@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.admin.mapper.SysUserMapperCustom">
+
+	<!-- 用户查询条件 通常情况，为了提高 sql片段可重用性，按单表创建sql片段 -->
+	<sql id="query_sysuser_where">
+		<if test="sysUserCustom">
+			<if test="sysUserCustom.id!=null and sysUserCustom.id!=''">
+				and SYS_USER.id = #{sysUserCustom.id}
+			</if>
+		</if>
+	</sql>
+
+	<!-- 用户查询 -->
+	<select id="findSysUserList" parameterType="cn.admin.pojo.vo.SysUserQueryVo"
+		resultType="cn.admin.pojo.vo.SysUserCustom">
+	
+		select * from SYS_USER
+       
+
+		<!-- <where>
+			<include refid="query_sysuser_where" />
+		</where> -->
+
+	</select>
+
+	
+
+
+</mapper>
