@@ -1,4 +1,4 @@
-# Admin-
+# Admin --
 基于AdminLTE的管理信息系统开发框架
 -- Admin0.1
 -- 2017.6.29
