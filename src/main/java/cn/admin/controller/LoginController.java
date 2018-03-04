@@ -101,7 +101,7 @@ public class LoginController {
 				throw new Exception();// 最终在异常处理器生成未知错误
 			}
 		}
-		// 登陆失败还到login页面去aaaa
+		// 登陆失败还到login页面去aaaabbbb
 		return "login";
 	}
 	
